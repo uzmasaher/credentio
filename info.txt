@@ -1,0 +1,2 @@
+I am following these instructions to create search.tsx
+https://youtu.be/IYoZvxUbhUQ?feature=shared&t=1098

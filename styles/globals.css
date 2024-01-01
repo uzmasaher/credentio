@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*                                          FOR FORM PAGE                                                     */
+
+@layer components {
+  .dark .custom-shadow-light {
+    display: none;
+  }
+
+  .light .custom-shadow-dark {
+    display: none;
+  }
+}
+
+/* Base styles */
+
+@layer base {
+  .input {
+    @apply bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg font-normal outline-none block w-full p-2.5;
+  }
+}
+@layer base {
+  .searchInput {
+    @apply bg-gray-50 border-2 border-gray-300 text-gray-900 text-sm rounded-lg font-normal outline-none block w-full p-2.5;
+  }
+}
+
+@layer components {
+  .focus-border {
+    @apply focus:border-violet-900 focus:drop-shadow-lg focus:ring-4 focus:ring-purple-100 focus:outline-none;
+  }
+
+  .focus-font {
+    @apply focus:font-normal;
+  }
+}
+
+@layer components {
+  .dark-input {
+    @apply dark:bg-gray-500 dark:border dark:border-gray-600 dark:placeholder-gray-200 dark:text-white dark:focus:ring-gray-800 dark:focus:border-gray-900 dark:focus:drop-shadow-lg dark:focus:bg-gray-950;
+  }
+}
+
+.custom-shadow-light {
+  box-shadow: 2px 2px 6px -1px rgba(139, 92, 246, 0.1),
+    -2px 2px 6px -1px rgba(139, 92, 246, 0.1),
+    2px -2px 6px -1px rgba(139, 92, 246, 0.1),
+    -2px -2px 6px -1px rgba(139, 92, 246, 0.1);
+}
+
+.custom-shadow-dark {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 -4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 -2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.text-with-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+}
+
+.input {
+  @apply text-[100%] focus-border focus-font dark-input border-violet-200 dark:border-black custom-shadow-light dark:custom-shadow-dark;
+}
+
+.passwordForm > div > div {
+  @apply mb-5 mt-5;
+}
+.passwordForm {
+  @apply mx-auto lg:px-[10%] px-[5%];
+}
+.col {
+  @apply grid md:grid-cols-2 md:gap-6;
+}
+.label {
+  @apply block mb-3 text-[100%] font-semibold text-violet-900 dark:text-gray-900;
+}
+
+.button {
+  @apply text-white text-[100%] bg-violet-600 hover:bg-violet-700 focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-lg  px-[6%] py-2.5 dark:bg-black dark:hover:bg-gray-700 dark:focus:ring-gray-600 dark:focus:bg-black;
+}
+.heading {
+  @apply flex items-center justify-center lg:text-[2.5rem] text-[170%] text-with-shadow 
+    text-violet-700 dark:text-gray-900 font-extrabold mb-8;
+}
+
+
+
+/*                                               FOR SEARCH PAGE                                                  */
+
+
+
+.searchLabel {
+  @apply mb-2 text-[87.5%] font-medium text-violet-900 sr-only dark:text-white;
+}
+.searchForm {
+  @apply mx-auto lg:px-[10%]  px-6;
+}
+.searchInput {
+  @apply text-[100%] focus-border focus-font dark-input border-violet-200 dark:border-black custom-shadow-light dark:custom-shadow-dark;
+}
+.searchButton {
+  @apply text-white text-[100%] h-full absolute end-0 bottom-0 bg-violet-600 hover:bg-violet-700 focus:ring-4 focus:outline-none focus:ring-violet-300 font-medium rounded-lg text-sm px-8 py-2 dark:bg-gray-600 dark:ring-gray-600 dark:focus:ring-gray-600 dark:hover:bg-gray-500 dark:focus:bg-gray-400;
+}
+
+
+
+
+/*                                     FOR PASSWORDLIST                                                 */
+
+
+
+
+.wrap {
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+.line {
+  @apply sticky bottom-0 h-px -mt-px bg-violet-800 dark:bg-gray-900;
+}
+.text {
+  @apply wrap text-[100%] text-violet-900 dark:text-gray-900;
+}
+.col_2 {
+  @apply grid lg:mx-[10%] m-[5%] lg:grid-cols-3 gap-3 md:grid-cols-2 md:gap-3;
+}
+.h5_card {
+  @apply mb-4 wrap text-xl font-bold tracking-tight text-violet-900  dark:text-gray-900;
+}
+
+.password_box {
+  @apply block  h-auto p-6 border-2 wrap bg-white border-violet-200 rounded-lg custom-shadow-light dark:custom-shadow-dark hover:bg-violet-100 
+  dark:bg-gray-500 dark:border-gray-800 dark:hover:bg-gray-600 dark:text-gray-900 dark:hover:text-gray-900 text-[100%];
+}
+.link {
+  @apply underline wrap hover:text-gray-900 text-green-700 dark:text-green-200 dark:hover:text-white dark:active:text-black;
+}
